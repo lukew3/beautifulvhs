@@ -49,5 +49,16 @@ h1 {
   cursor: pointer;
 }
 
+.tapeName {
+  color: white;
+  font-size: 16pt;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 
 /*# sourceMappingURL=main.css.map*/
