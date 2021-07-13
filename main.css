@@ -36,5 +36,18 @@ h1 {
   font-size: 20pt;
 }
 
+#selectRandom {
+  color: white;
+  background-color: #6828b5;
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  bottom: 60px;
+  border-radius: 5px;
+  margin-left: calc(50% - 85px);
+  cursor: pointer;
+}
+
 
 /*# sourceMappingURL=main.css.map*/
