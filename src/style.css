@@ -1,0 +1,61 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    height: 100vh;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: -1;
+}
+
+nav {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+}
+
+h1 {
+  margin-top: 3px;
+  color: white;
+  margin-right: 20px;
+  font-size: 20pt;
+}
+
+#selectRandom {
+  color: white;
+  background-color: #6828b5;
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  bottom: 60px;
+  border-radius: 5px;
+  margin-left: calc(50% - 85px);
+  cursor: pointer;
+}
+
+.tapeName {
+  color: white;
+  font-size: 16pt;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}
