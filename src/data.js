@@ -219,22 +219,22 @@ const data = [
   },
   {
     id: 44,
-    title: "Sony Dynamicron Durable & Excellent Quality",
+    title: "Sony Dynamicron DX",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-dynamicron-durable-excellent-quality/",
   },
   {
     id: 45,
-    title: "Sony Super Durable & Excellent Quality",
+    title: "Sony Super DX",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-super-durable-excellent-quality/",
   },
   {
     id: 46,
-    title: "Sony Super Durable & Excellent Quality 2",
+    title: "Sony Super DX",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-super-durable-excellent-quality/",
   },
   {
     id: 47,
-    title: "Sony Super Durable & Excellent Quality 3",
+    title: "Sony Super DX",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-super-durable-excellent-quality/",
   },
   {
