@@ -122,7 +122,7 @@ const data = [
   },
   {
     id: 25,
-    title: "NEC High Definition 2",
+    title: "NEC HDx",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/nec-high-definition/",
   },
   {
@@ -181,108 +181,101 @@ const data = [
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/qtape/",
   },
   {
-	  //might not need this one, it's similar to the previous and has a sticker on it
     id: 37,
-    title: "QTape E-180",
-    source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/qtape/",
-  },
-  {
-    id: 38,
     title: "Raks SQ",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/raks-sq/",
   },
   {
-    id: 39,
+    id: 38,
     title: "Sanyo High Grade E-180",
-    source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sanyo-high-grade/",
-  },
-  {
-	  //similar to the previous
-    id: 40,
-    title: "Sanyo High Grade E-240",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sanyo-high-grade/",
   },
 	//no scotch EG
   {
-    id: 41,
+    id: 39,
     title: "Sheen",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sheen/",
   },
   {
-    id: 42,
+    id: 40,
     title: "SKC HQ Maxplay Grade",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/skc-hq-maxplay-grade/",
   },
 	//didn't include SKC HQ Maxplay Grade alternate because they were really similar
   {
-    id: 43,
+    id: 41,
     title: "Sony Clarity and Durability",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-clarity-and-durability/",
   },
   {
-    id: 44,
+    id: 42,
     title: "Sony Dynamicron",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-dynamicron/",
   },
   {
-    id: 45,
+    id: 43,
+    title: "Sony Dynamicron 2",
+    source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-dynamicron/",
+  },
+  {
+    id: 44,
     title: "Sony Dynamicron Durable & Excellent Quality",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-dynamicron-durable-excellent-quality/",
   },
   {
-    id: 46,
+    id: 45,
     title: "Sony Super Durable & Excellent Quality",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-super-durable-excellent-quality/",
   },
   {
-    id: 47,
+    id: 46,
     title: "Sony Super Durable & Excellent Quality 2",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-super-durable-excellent-quality/",
   },
   {
-    id: 48,
+    id: 47,
     title: "Sony Super Durable & Excellent Quality 3",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/sony-super-durable-excellent-quality/",
   },
   {
-    id: 49,
+    id: 48,
     title: "TDK Sharp & Clear",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/tdk-sharp-clear/",
   },
   {
-    id: 50,
+    id: 49,
     title: "TDK Super Avilyn",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/tdk-super-avilyn/",
   },
   {
-    id: 51,
+    id: 50,
     title: "TDK Super Avilyn 2",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/tdk-super-avilyn/",
   },
   {
-    id: 52,
+    id: 51,
     title: "TDK TV",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/tdk-tv/",
   },
   {
-    id: 53,
+    id: 52,
     title: "Teac ASX",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/teac-asx/",
   },
 	//could also include 4 hour, but design isn't much different
   {
-    id: 54,
+    id: 53,
     title: "Teac HX",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/teac-hx/",
     //there are 4 different versions of this, just slightly different
   },
   {
-    id: 55,
+    id: 54,
     title: "Teac X-1",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/teac-x-1/",
   },
   {
-    id: 56,
+    id: 55,
     title: "Teac X-2",
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/teac-x-2/",
   },
