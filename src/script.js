@@ -19,7 +19,10 @@ for (let i = 1; i < tapeCount+1; i++){
 
 const params = new URLSearchParams(window.location.search);
 let tapeNum = params.get("tape");
-if (tapeNum == null) tapeNum = 1;
+if (tapeNum == null) {
+  tapeNum = Math.floor((Math.random() * tapeCount) + 1);
+  window.history.pushState(tapeNum, 'Title', `/beautifulvhs/?tape=${tapeNum}`);
+}
 document.querySelector("#selectTape").value = tapeNum;
 document.getElementById("tapeName").text = data[tapeNum-1].title;
 document.getElementById("tapeName").href = data[tapeNum-1].source;
