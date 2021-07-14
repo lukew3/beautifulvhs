@@ -1,11 +1,12 @@
-import './style.css'
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import * as dat from 'dat.gui'
+import './style.css';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import * as dat from 'dat.gui';
 import * as images from './images.js';
+import data from './data.js';
 const loader = new THREE.TextureLoader();
 
-const tapeCount = 100;
+const tapeCount = 3;
 
 // Populate select field
 let selectElem = document.getElementById("selectTape");
@@ -20,6 +21,8 @@ const params = new URLSearchParams(window.location.search);
 let tapeNum = params.get("tape");
 if (tapeNum == null) tapeNum = 1;
 document.querySelector("#selectTape").value = tapeNum;
+document.getElementById("tapeName").text = data[tapeNum-1].title;
+document.getElementById("tapeName").href = data[tapeNum-1].source;
 
 document.querySelector('#selectTape').addEventListener("change", function() {
   tapeNum = this.value;
@@ -33,6 +36,8 @@ document.getElementById("selectRandom").addEventListener('click', function() {
 })
 
 const updateTexture = () => {
+  document.getElementById("tapeName").text = data[tapeNum-1].title;
+  document.getElementById("tapeName").href = data[tapeNum-1].source;
   materials = [
     new THREE.MeshBasicMaterial({ map: loader.load(images["spine" + tapeNum])}),
     new THREE.MeshBasicMaterial({ map: loader.load(images["tape"])}),
