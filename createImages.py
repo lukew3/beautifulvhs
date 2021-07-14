@@ -1,4 +1,4 @@
-lastIndex = 3
+lastIndex = 5
 
 lines = ['import tape from "../textures/tape.png";\n']
 

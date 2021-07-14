@@ -6,7 +6,7 @@ import * as images from './images.js';
 import data from './data.js';
 const loader = new THREE.TextureLoader();
 
-const tapeCount = 3;
+const tapeCount = 5;
 
 // Populate select field
 let selectElem = document.getElementById("selectTape");

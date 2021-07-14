@@ -24,3 +24,4 @@ npm run build
 * Add random pick button
   * Should the first tape shown be random?
   * Add link to vaultofvhs.tumblr.com
+* Make the tape removable, and set custom texture if it has it
