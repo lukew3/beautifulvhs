@@ -35,7 +35,7 @@ document.getElementById("selectRandom").addEventListener('click', function() {
   updateTexture();
 })
 
-const updateTexture = () => {
+const updateTexture = (pushState=true) => {
   document.getElementById("tapeName").text = data[tapeNum-1].title;
   document.getElementById("tapeName").href = data[tapeNum-1].source;
   materials = [
@@ -47,7 +47,8 @@ const updateTexture = () => {
     new THREE.MeshBasicMaterial({ map: loader.load(images["front" + tapeNum])}),
   ]
   box.material = materials;
-  window.history.pushState(tapeNum, 'Title', `/beautifulvhs/?tape=${tapeNum}`);
+  if (pushState === true)
+    window.history.pushState(tapeNum, 'Title', `/beautifulvhs/?tape=${tapeNum}`);
 }
 
 window.onpopstate = (e) => {
@@ -58,16 +59,7 @@ window.onpopstate = (e) => {
   } else {
     tapeNum = 1;
   }
-  document.querySelector("#selectTape").value = tapeNum;
-  materials = [
-    new THREE.MeshBasicMaterial({ map: loader.load(images["spine" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["tape"])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["top" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["bottom" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["back" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["front" + tapeNum])}),
-  ]
-  box.material = materials;
+  updateTexture(false);
 }
 
 // Debug
