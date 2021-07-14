@@ -49,7 +49,7 @@ h1 {
   cursor: pointer;
 }
 
-.tapeName {
+#tapeName {
   color: white;
   font-size: 16pt;
   display: block;
