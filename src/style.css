@@ -47,6 +47,7 @@ h1 {
   border-radius: 5px;
   margin-left: calc(50% - 85px);
   cursor: pointer;
+  border: none;
 }
 
 #tapeName {
