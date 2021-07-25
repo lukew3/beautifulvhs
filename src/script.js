@@ -62,6 +62,7 @@ window.onpopstate = (e) => {
   } else {
     tapeNum = 1;
   }
+  document.querySelector("#selectTape").value = tapeNum;
   updateTexture(false);
 }
 
