@@ -1,5 +1,3 @@
-import * as dat from 'dat.gui';
-import data from './data.js';
 const loader = new THREE.TextureLoader();
 
 const tapeCount = 55;

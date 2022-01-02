@@ -280,5 +280,3 @@ const data = [
     source: "https://goughlui.com/the-vhs-corner/vhs-cassette-library/teac-x-2/",
   },
 ]
-
-export default data;
