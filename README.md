@@ -21,8 +21,5 @@ npm run build
   * Zoom in should come with this ability
 * Add pause rotation button
 * Possible feature is go to next tape after each full rotation
-* Add random pick button
-  * Should the first tape shown be random?
-  * Add link to vaultofvhs.tumblr.com
 * Make the tape removable, and set custom texture if it has it
 * Add a link to github, possibly use a github corner
