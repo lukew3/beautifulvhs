@@ -1,7 +1,6 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import * as dat from 'dat.gui';
 import * as images from './images.js';
 import data from './data.js';
 const loader = new THREE.TextureLoader();
@@ -65,9 +64,6 @@ window.onpopstate = (e) => {
   document.querySelector("#selectTape").value = tapeNum;
   updateTexture(false);
 }
-
-// Debug
-const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
