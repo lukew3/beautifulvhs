@@ -11,6 +11,7 @@ gulp.task('browserify', () => {
                 .pipe(buffer())
                 .pipe(uglify())
                 .pipe(gulp.dest('./dist'));
+		
 });
 
 gulp.task('copyStatic', () => {

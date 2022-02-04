@@ -1,7 +1,7 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import * as images from './images.js';
-import data from './data.js';
+const THREE = require('three');
+//const images = require('./images.js');
+const images = {};
+const { data } = require('./data.js');
 const loader = new THREE.TextureLoader();
 
 const tapeCount = 55;
