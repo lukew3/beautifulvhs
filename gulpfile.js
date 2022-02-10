@@ -21,7 +21,7 @@ gulp.task('copyStatic', () => {
                 .pipe(gulp.dest('dist'));
         gulp.src('src/style.css')
                 .pipe(gulp.dest('dist'));
-        return gulp.src('textures/*/*')
+        return gulp.src('src/textures/*/*')
                 .pipe(gulp.dest('dist/textures'));
 });
 

@@ -4,7 +4,36 @@ const images = {};
 const { data } = require('./data.js');
 const loader = new THREE.TextureLoader();
 
+function $(passedId) { return document.getElementById(passedId); }
+let box;
+//const tapeTextureImage = require('./textures/tape.png');
+//let tapeTexture = new THREE.TextureLoader().load(tapeTextureImage);
+const params = new URLSearchParams(window.location.search);
+let tapeNum = params.get("tape");
+const rootPath = '/';
 const tapeCount = 55;
+
+//const rootPath = '/beatifulvhs/'; // for gh-pages
+
+let spineTextureElement = $('spineTexture');
+let tapeTextureElement = $('tapeTexture');
+let topTextureElement = $('topTexture');
+let bottomTextureElement = $('bottomTexture');
+let backTextureElement = $('backTexture');
+let frontTextureElement = $('frontTexture');
+
+let spineTexture = new THREE.Texture(spineTextureElement);
+//spineTexture.needsUpdate = true;
+let tapeTexture = new THREE.Texture(tapeTextureElement);
+//tapeTexture.needsUpdate = true;
+let topTexture = new THREE.Texture(topTextureElement);
+//topTexture.needsUpdate = true;
+let bottomTexture = new THREE.Texture(bottomTextureElement);
+//bottomTexture.needsUpdate = true;
+let backTexture = new THREE.Texture(backTextureElement);
+//backTexture.needsUpdate = true;
+let frontTexture = new THREE.Texture(frontTextureElement);
+//frontTexture.needsUpdate = true;
 
 // Populate select field
 let selectElem = document.getElementById("selectTape");
@@ -15,54 +44,13 @@ for (let i = 1; i < tapeCount+1; i++){
   selectElem.append(element);
 }
 
-const params = new URLSearchParams(window.location.search);
-let tapeNum = params.get("tape");
 if (tapeNum == null) {
   tapeNum = Math.floor((Math.random() * tapeCount) + 1);
-  window.history.pushState(tapeNum, 'Title', `/beautifulvhs/?tape=${tapeNum}`);
+  window.history.pushState(tapeNum, 'Title', `${rootPath}?tape=${tapeNum}`);
 }
 document.querySelector("#selectTape").value = tapeNum;
 document.getElementById("tapeName").text = data[tapeNum-1].title;
 document.getElementById("tapeName").href = data[tapeNum-1].source;
-
-document.querySelector('#selectTape').addEventListener("change", function() {
-  tapeNum = this.value;
-  updateTexture();
-});
-
-document.getElementById("selectRandom").addEventListener('click', function() {
-  tapeNum = Math.floor((Math.random() * tapeCount) + 1);
-  document.querySelector("#selectTape").value = tapeNum;
-  updateTexture();
-})
-
-const updateTexture = (pushState=true) => {
-  document.getElementById("tapeName").text = data[tapeNum-1].title;
-  document.getElementById("tapeName").href = data[tapeNum-1].source;
-  materials = [
-    new THREE.MeshBasicMaterial({ map: loader.load(images["spine" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["tape"])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["top" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["bottom" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["back" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["front" + tapeNum])}),
-  ]
-  box.material = materials;
-  if (pushState === true)
-    window.history.pushState(tapeNum, 'Title', `/beautifulvhs/?tape=${tapeNum}`);
-}
-
-window.onpopstate = (e) => {
-  if (e.state) {
-    tapeNum = e.state;
-  } else if (params.get("tape") != null) {
-    tapeNum = params.get("tape");
-  } else {
-    tapeNum = 1;
-  }
-  document.querySelector("#selectTape").value = tapeNum;
-  updateTexture(false);
-}
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -76,18 +64,22 @@ const geometry = new THREE.BoxGeometry( 10.2, 18.7, 2.5 );
 
 // Materials
 //const material = new THREE.MeshBasicMaterial({ map: texture })
+console.log('before');
 let materials = [
-  new THREE.MeshBasicMaterial({ map: loader.load(images["spine" + tapeNum])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["tape"])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["top" + tapeNum])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["bottom" + tapeNum])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["back" + tapeNum])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["front" + tapeNum])}),
+    new THREE.MeshBasicMaterial({ map: spineTexture}),
+    new THREE.MeshBasicMaterial({ map: tapeTexture}),
+    new THREE.MeshBasicMaterial({ map: topTexture}),
+    new THREE.MeshBasicMaterial({ map: bottomTexture}),
+    new THREE.MeshBasicMaterial({ map: backTexture}),
+    new THREE.MeshBasicMaterial({ map: frontTexture}),
 ]
-
+console.log('after');
+	
 // Mesh
-let box = new THREE.Mesh(geometry,materials)
+console.log('before');
+box = new THREE.Mesh(geometry,materials)
 scene.add(box)
+console.log('after');
 
 // Lights
 
@@ -167,5 +159,56 @@ const tick = () =>
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
 }
-
+console.log("end");
 tick()
+
+document.querySelector('#selectTape').addEventListener("change", function() {
+  tapeNum = this.value;
+  updateTexture();
+});
+
+document.getElementById("selectRandom").addEventListener('click', function() {
+  tapeNum = Math.floor((Math.random() * tapeCount) + 1);
+  document.querySelector("#selectTape").value = tapeNum;
+  updateTexture();
+})
+
+const updateTexture = (pushState=true) => {
+  console.log("updating texture");
+  document.getElementById("tapeName").text = data[tapeNum-1].title;
+  document.getElementById("tapeName").href = data[tapeNum-1].source;
+  materials = [
+    new THREE.MeshBasicMaterial({ map: spineTexture}),
+    new THREE.MeshBasicMaterial({ map: tapeTexture}),
+    new THREE.MeshBasicMaterial({ map: topTexture}),
+    new THREE.MeshBasicMaterial({ map: bottomTexture}),
+    new THREE.MeshBasicMaterial({ map: backTexture}),
+    new THREE.MeshBasicMaterial({ map: frontTexture}),
+	/*
+    new THREE.MeshBasicMaterial({ map: loader.load(await fetch(`/textures/${tapeNum}/top.jpg`))}),
+    new THREE.MeshBasicMaterial({ map: loader.load(await fetch(`/textures/${tapeNum}/bottom.jpg`))}),
+    new THREE.MeshBasicMaterial({ map: loader.load(await fetch(`/textures/${tapeNum}/back.jpg`))}),
+    new THREE.MeshBasicMaterial({ map: loader.load(await fetch(`/textures/${tapeNum}/front.jpg`))}),
+    */
+  ]
+  console.log("Made it past getting textures");
+  box.material = materials;
+  console.log("p2");
+  if (pushState === true)
+    //window.history.pushState(tapeNum, 'Title', `/beautifulvhs/?tape=${tapeNum}`);
+    window.history.pushState(tapeNum, 'Title', `${rootPath}?tape=${tapeNum}`);
+  console.log("p3");
+}
+
+window.onpopstate = (e) => {
+  if (e.state) {
+    tapeNum = e.state;
+  } else if (params.get("tape") != null) {
+    tapeNum = params.get("tape");
+  } else {
+    tapeNum = 1;
+  }
+  document.querySelector("#selectTape").value = tapeNum;
+  updateTexture(false);
+}
+
