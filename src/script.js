@@ -6,6 +6,7 @@ import data from './data.js';
 const loader = new THREE.TextureLoader();
 
 const tapeCount = 55;
+const basePath = (window.location.hostname == 'lukew3.github.io') ? '/beautifulvhs/' : '/';
 
 // Populate select field
 let selectElem = document.getElementById("selectTape");
@@ -20,7 +21,7 @@ const params = new URLSearchParams(window.location.search);
 let tapeNum = params.get("tape");
 if (tapeNum == null) {
   tapeNum = Math.floor((Math.random() * tapeCount) + 1);
-  window.history.pushState(tapeNum, 'Title', `/beautifulvhs/?tape=${tapeNum}`);
+  window.history.pushState(tapeNum, 'Title', `${basePath}?tape=${tapeNum}`);
 }
 document.querySelector("#selectTape").value = tapeNum;
 document.getElementById("tapeName").text = data[tapeNum-1].title;
@@ -50,7 +51,7 @@ const updateTexture = (pushState=true) => {
   ]
   box.material = materials;
   if (pushState === true)
-    window.history.pushState(tapeNum, 'Title', `/beautifulvhs/?tape=${tapeNum}`);
+    window.history.pushState(tapeNum, 'Title', `${basePath}?tape=${tapeNum}`);
 }
 
 window.onpopstate = (e) => {
