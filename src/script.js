@@ -40,14 +40,7 @@ document.getElementById("selectRandom").addEventListener('click', function() {
 const updateTexture = (pushState=true) => {
   document.getElementById("tapeName").text = data[tapeNum-1].title;
   document.getElementById("tapeName").href = data[tapeNum-1].source;
-  materials = [
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/spine.jpg`)}),
-    new THREE.MeshBasicMaterial({ map: loader.load('./textures/tape.png')}),
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/top.jpg`)}),
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/bottom.jpg`)}),
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/back.jpg`)}),
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/front.jpg`)}),
-  ]
+  setMaterials();
   box.material = materials;
   if (pushState === true)
     window.history.pushState(tapeNum, 'Title', `${basePath}?tape=${tapeNum}`);
@@ -65,6 +58,17 @@ window.onpopstate = (e) => {
   updateTexture(false);
 }
 
+function setMaterials() {
+  materials = [
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/spine.jpg`)}),
+    new THREE.MeshBasicMaterial({ map: loader.load('./textures/tape.png')}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/top.jpg`)}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/bottom.jpg`)}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/back.jpg`)}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/front.jpg`)}),
+  ]
+}
+
 let canvas, scene, geometry, materials, box, pointLight, sizes, camera, renderer;
 
 function init() {
@@ -74,14 +78,7 @@ function init() {
   geometry = new THREE.BoxGeometry( 10.2, 18.7, 2.5 );
 
   // Materials
-  materials = [
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/spine.jpg`)}),
-    new THREE.MeshBasicMaterial({ map: loader.load('./textures/tape.png')}),
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/top.jpg`)}),
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/bottom.jpg`)}),
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/back.jpg`)}),
-    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/front.jpg`)}),
-  ]
+  setMaterials();
 
   // Mesh
   box = new THREE.Mesh(geometry,materials)
