@@ -1,8 +1,7 @@
-import './style.css';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import * as images from './images.js';
-import data from './data.js';
+//mimport * as THREE from 'three';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+// import * as images from './images.js';
+// import data from './data.js';
 const loader = new THREE.TextureLoader();
 
 const tapeCount = data.length;
@@ -42,12 +41,12 @@ const updateTexture = (pushState=true) => {
   document.getElementById("tapeName").text = data[tapeNum-1].title;
   document.getElementById("tapeName").href = data[tapeNum-1].source;
   materials = [
-    new THREE.MeshBasicMaterial({ map: loader.load(images["spine" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["tape"])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["top" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["bottom" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["back" + tapeNum])}),
-    new THREE.MeshBasicMaterial({ map: loader.load(images["front" + tapeNum])}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/spine.jpg`)}),
+    new THREE.MeshBasicMaterial({ map: loader.load('./textures/tape.png')}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/top.jpg`)}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/bottom.jpg`)}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/back.jpg`)}),
+    new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/front.jpg`)}),
   ]
   box.material = materials;
   if (pushState === true)
@@ -79,12 +78,12 @@ const geometry = new THREE.BoxGeometry( 10.2, 18.7, 2.5 );
 // Materials
 //const material = new THREE.MeshBasicMaterial({ map: texture })
 let materials = [
-  new THREE.MeshBasicMaterial({ map: loader.load(images["spine" + tapeNum])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["tape"])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["top" + tapeNum])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["bottom" + tapeNum])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["back" + tapeNum])}),
-  new THREE.MeshBasicMaterial({ map: loader.load(images["front" + tapeNum])}),
+  new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/spine.jpg`)}),
+  new THREE.MeshBasicMaterial({ map: loader.load('./textures/tape.png')}),
+  new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/top.jpg`)}),
+  new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/bottom.jpg`)}),
+  new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/back.jpg`)}),
+  new THREE.MeshBasicMaterial({ map: loader.load(`./textures/${tapeNum}/front.jpg`)}),
 ]
 
 // Mesh
