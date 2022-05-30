@@ -5,7 +5,7 @@ import * as images from './images.js';
 import data from './data.js';
 const loader = new THREE.TextureLoader();
 
-const tapeCount = 55;
+const tapeCount = data.length;
 const basePath = (window.location.hostname == 'lukew3.github.io') ? '/beautifulvhs/' : '/';
 
 // Populate select field

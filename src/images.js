@@ -274,6 +274,161 @@ import spine55 from "../textures/55/spine.jpg";
 import back55 from "../textures/55/back.jpg";
 import top55 from "../textures/55/top.jpg";
 import bottom55 from "../textures/55/bottom.jpg";
+import front56 from "../textures/56/front.jpg";
+import spine56 from "../textures/56/spine.jpg";
+import back56 from "../textures/56/back.jpg";
+import top56 from "../textures/56/top.jpg";
+import bottom56 from "../textures/56/bottom.jpg";
+import front57 from "../textures/57/front.jpg";
+import spine57 from "../textures/57/spine.jpg";
+import back57 from "../textures/57/back.jpg";
+import top57 from "../textures/57/top.jpg";
+import bottom57 from "../textures/57/bottom.jpg";
+import front58 from "../textures/58/front.jpg";
+import spine58 from "../textures/58/spine.jpg";
+import back58 from "../textures/58/back.jpg";
+import top58 from "../textures/58/top.jpg";
+import bottom58 from "../textures/58/bottom.jpg";
+import front59 from "../textures/59/front.jpg";
+import spine59 from "../textures/59/spine.jpg";
+import back59 from "../textures/59/back.jpg";
+import top59 from "../textures/59/top.jpg";
+import bottom59 from "../textures/59/bottom.jpg";
+import front60 from "../textures/60/front.jpg";
+import spine60 from "../textures/60/spine.jpg";
+import back60 from "../textures/60/back.jpg";
+import top60 from "../textures/60/top.jpg";
+import bottom60 from "../textures/60/bottom.jpg";
+import front61 from "../textures/61/front.jpg";
+import spine61 from "../textures/61/spine.jpg";
+import back61 from "../textures/61/back.jpg";
+import top61 from "../textures/61/top.jpg";
+import bottom61 from "../textures/61/bottom.jpg";
+import front62 from "../textures/62/front.jpg";
+import spine62 from "../textures/62/spine.jpg";
+import back62 from "../textures/62/back.jpg";
+import top62 from "../textures/62/top.jpg";
+import bottom62 from "../textures/62/bottom.jpg";
+import front63 from "../textures/63/front.jpg";
+import spine63 from "../textures/63/spine.jpg";
+import back63 from "../textures/63/back.jpg";
+import top63 from "../textures/63/top.jpg";
+import bottom63 from "../textures/63/bottom.jpg";
+import front64 from "../textures/64/front.jpg";
+import spine64 from "../textures/64/spine.jpg";
+import back64 from "../textures/64/back.jpg";
+import top64 from "../textures/64/top.jpg";
+import bottom64 from "../textures/64/bottom.jpg";
+import front65 from "../textures/65/front.jpg";
+import spine65 from "../textures/65/spine.jpg";
+import back65 from "../textures/65/back.jpg";
+import top65 from "../textures/65/top.jpg";
+import bottom65 from "../textures/65/bottom.jpg";
+import front66 from "../textures/66/front.jpg";
+import spine66 from "../textures/66/spine.jpg";
+import back66 from "../textures/66/back.jpg";
+import top66 from "../textures/66/top.jpg";
+import bottom66 from "../textures/66/bottom.jpg";
+import front67 from "../textures/67/front.jpg";
+import spine67 from "../textures/67/spine.jpg";
+import back67 from "../textures/67/back.jpg";
+import top67 from "../textures/67/top.jpg";
+import bottom67 from "../textures/67/bottom.jpg";
+import front68 from "../textures/68/front.jpg";
+import spine68 from "../textures/68/spine.jpg";
+import back68 from "../textures/68/back.jpg";
+import top68 from "../textures/68/top.jpg";
+import bottom68 from "../textures/68/bottom.jpg";
+import front69 from "../textures/69/front.jpg";
+import spine69 from "../textures/69/spine.jpg";
+import back69 from "../textures/69/back.jpg";
+import top69 from "../textures/69/top.jpg";
+import bottom69 from "../textures/69/bottom.jpg";
+import front70 from "../textures/70/front.jpg";
+import spine70 from "../textures/70/spine.jpg";
+import back70 from "../textures/70/back.jpg";
+import top70 from "../textures/70/top.jpg";
+import bottom70 from "../textures/70/bottom.jpg";
+import front71 from "../textures/71/front.jpg";
+import spine71 from "../textures/71/spine.jpg";
+import back71 from "../textures/71/back.jpg";
+import top71 from "../textures/71/top.jpg";
+import bottom71 from "../textures/71/bottom.jpg";
+import front72 from "../textures/72/front.jpg";
+import spine72 from "../textures/72/spine.jpg";
+import back72 from "../textures/72/back.jpg";
+import top72 from "../textures/72/top.jpg";
+import bottom72 from "../textures/72/bottom.jpg";
+import front73 from "../textures/73/front.jpg";
+import spine73 from "../textures/73/spine.jpg";
+import back73 from "../textures/73/back.jpg";
+import top73 from "../textures/73/top.jpg";
+import bottom73 from "../textures/73/bottom.jpg";
+import front74 from "../textures/74/front.jpg";
+import spine74 from "../textures/74/spine.jpg";
+import back74 from "../textures/74/back.jpg";
+import top74 from "../textures/74/top.jpg";
+import bottom74 from "../textures/74/bottom.jpg";
+import front75 from "../textures/75/front.jpg";
+import spine75 from "../textures/75/spine.jpg";
+import back75 from "../textures/75/back.jpg";
+import top75 from "../textures/75/top.jpg";
+import bottom75 from "../textures/75/bottom.jpg";
+import front76 from "../textures/76/front.jpg";
+import spine76 from "../textures/76/spine.jpg";
+import back76 from "../textures/76/back.jpg";
+import top76 from "../textures/76/top.jpg";
+import bottom76 from "../textures/76/bottom.jpg";
+import front77 from "../textures/77/front.jpg";
+import spine77 from "../textures/77/spine.jpg";
+import back77 from "../textures/77/back.jpg";
+import top77 from "../textures/77/top.jpg";
+import bottom77 from "../textures/77/bottom.jpg";
+import front78 from "../textures/78/front.jpg";
+import spine78 from "../textures/78/spine.jpg";
+import back78 from "../textures/78/back.jpg";
+import top78 from "../textures/78/top.jpg";
+import bottom78 from "../textures/78/bottom.jpg";
+import front79 from "../textures/79/front.jpg";
+import spine79 from "../textures/79/spine.jpg";
+import back79 from "../textures/79/back.jpg";
+import top79 from "../textures/79/top.jpg";
+import bottom79 from "../textures/79/bottom.jpg";
+import front80 from "../textures/80/front.jpg";
+import spine80 from "../textures/80/spine.jpg";
+import back80 from "../textures/80/back.jpg";
+import top80 from "../textures/80/top.jpg";
+import bottom80 from "../textures/80/bottom.jpg";
+import front81 from "../textures/81/front.jpg";
+import spine81 from "../textures/81/spine.jpg";
+import back81 from "../textures/81/back.jpg";
+import top81 from "../textures/81/top.jpg";
+import bottom81 from "../textures/81/bottom.jpg";
+import front82 from "../textures/82/front.jpg";
+import spine82 from "../textures/82/spine.jpg";
+import back82 from "../textures/82/back.jpg";
+import top82 from "../textures/82/top.jpg";
+import bottom82 from "../textures/82/bottom.jpg";
+import front83 from "../textures/83/front.jpg";
+import spine83 from "../textures/83/spine.jpg";
+import back83 from "../textures/83/back.jpg";
+import top83 from "../textures/83/top.jpg";
+import bottom83 from "../textures/83/bottom.jpg";
+import front84 from "../textures/84/front.jpg";
+import spine84 from "../textures/84/spine.jpg";
+import back84 from "../textures/84/back.jpg";
+import top84 from "../textures/84/top.jpg";
+import bottom84 from "../textures/84/bottom.jpg";
+import front85 from "../textures/85/front.jpg";
+import spine85 from "../textures/85/spine.jpg";
+import back85 from "../textures/85/back.jpg";
+import top85 from "../textures/85/top.jpg";
+import bottom85 from "../textures/85/bottom.jpg";
+import front86 from "../textures/86/front.jpg";
+import spine86 from "../textures/86/spine.jpg";
+import back86 from "../textures/86/back.jpg";
+import top86 from "../textures/86/top.jpg";
+import bottom86 from "../textures/86/bottom.jpg";
 export { tape,
 front1, spine1, back1, top1, bottom1,
 front2, spine2, back2, top2, bottom2,
@@ -330,4 +485,35 @@ front52, spine52, back52, top52, bottom52,
 front53, spine53, back53, top53, bottom53,
 front54, spine54, back54, top54, bottom54,
 front55, spine55, back55, top55, bottom55,
+front56, spine56, back56, top56, bottom56,
+front57, spine57, back57, top57, bottom57,
+front58, spine58, back58, top58, bottom58,
+front59, spine59, back59, top59, bottom59,
+front60, spine60, back60, top60, bottom60,
+front61, spine61, back61, top61, bottom61,
+front62, spine62, back62, top62, bottom62,
+front63, spine63, back63, top63, bottom63,
+front64, spine64, back64, top64, bottom64,
+front65, spine65, back65, top65, bottom65,
+front66, spine66, back66, top66, bottom66,
+front67, spine67, back67, top67, bottom67,
+front68, spine68, back68, top68, bottom68,
+front69, spine69, back69, top69, bottom69,
+front70, spine70, back70, top70, bottom70,
+front71, spine71, back71, top71, bottom71,
+front72, spine72, back72, top72, bottom72,
+front73, spine73, back73, top73, bottom73,
+front74, spine74, back74, top74, bottom74,
+front75, spine75, back75, top75, bottom75,
+front76, spine76, back76, top76, bottom76,
+front77, spine77, back77, top77, bottom77,
+front78, spine78, back78, top78, bottom78,
+front79, spine79, back79, top79, bottom79,
+front80, spine80, back80, top80, bottom80,
+front81, spine81, back81, top81, bottom81,
+front82, spine82, back82, top82, bottom82,
+front83, spine83, back83, top83, bottom83,
+front84, spine84, back84, top84, bottom84,
+front85, spine85, back85, top85, bottom85,
+front86, spine86, back86, top86, bottom86,
 };
