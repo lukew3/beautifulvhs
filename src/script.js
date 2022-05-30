@@ -67,12 +67,7 @@ window.onpopstate = (e) => {
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
-
-// Scene
 const scene = new THREE.Scene()
-
-// Objects
-//const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
 const geometry = new THREE.BoxGeometry( 10.2, 18.7, 2.5 );
 
 // Materials
@@ -126,14 +121,20 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.x = 0
-camera.position.y = 0
-camera.position.z = 30
+camera.position.set(0,0,30);
 scene.add(camera)
 
 // Controls
-// const controls = new OrbitControls(camera, canvas)
-// controls.enableDamping = true
+/*
+const controls = new THREE.OrbitControls(camera, canvas)
+controls.enableDamping = true
+controls.dampingFactor = 0.05;
+controls.screenSpacePanning = false;
+controls.minDistance = 100;
+controls.maxDistance = 500;
+controls.maxPolarAngle = Math.PI / 2;
+controls.addEventListener( 'change', ()=>{console.log("CONTROLS UPDATED")} );
+*/
 
 /**
  * Renderer
